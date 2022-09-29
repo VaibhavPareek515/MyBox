@@ -1,0 +1,41 @@
+How to upload the files:
+
+1) git clone repsoitory link
+2) ls
+3) cd repsoitory name/
+4) ls
+5) git status
+6) git checkout barnch name(in which you want to save your files)
+7) git status 
+8) ls
+9) mkdir site (making a folder to save your files)
+
+
+ssh-key:
+C:\Users\h\.ssh
+10) ls
+11) copy the file you want to upload into the GitHub and paste to the site folder
+12) ls
+13) git status
+14) cd ..
+15) git status
+16) git add .
+17) git status
+18) git commit -m "What you want"
+19) git status 
+20) git push
+
+How to update the files:
+
+1) git status
+2) git add site/xyz.html
+3) git status
+4) git commit -m "Updated"
+5) git status
+6) git push 
+
+How to do browser sync 
+
+1) cd site/
+2) ls
+3) browser-sync start --server --directory --files "file name eg: xyz.html"
