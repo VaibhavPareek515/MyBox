@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<title>ajax</title>
+</head>
+<style>
+	#nav ul {
+		display: flex;
+		column-gap: 10px;
+
+		
+	}
+
+	#nav li {
+		text-decoration: underline;
+		column-gap: 10px;
+		color: blue;
+		list-style: none;
+		cursor: pointer;
+	}
+
+	#content {
+		height: 400px;
+		width: 600px;
+		border-style: solid;
+		border-color: blue;
+		overflow: auto;
+	}
+</style>
 <body>
-
-<div id="demo">
-  <h2>Let AJAX change this text</h2>
-  <button type="button" onclick="loadDoc()">Change Content</button>
+<div id="nav">
+	<ul>
+		<li onclick="showhome()">Home</li>
+		<li>Projects</li>
+		<li>About</li>
+	</ul>
 </div>
+<div id="content"></div>
 <script>
-	function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-     document.getElementById("demo").innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "ajax_info.txt", true);
-  xhttp.send();
-}
-
+	function showhome() {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function () {
+		if (this.readystate == 2 && this.status == 200) {
+			document.getElementById("content").innerHTML = this.responseText;
+		}
+     };
+     xhttp.open("GET", "home.html", true);
+     xhttp.send();
+	}
 </script>
 </body>
 </html>
