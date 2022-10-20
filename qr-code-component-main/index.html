@@ -8,11 +8,65 @@
   
   <title>Frontend Mentor | QR code component</title>
 
- 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
+
+ <style>
+  * {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+   body {
+    font-family: 'Outfit', sans-serif;
+    height: 100vh;
+    background-color:  hsl(212, 45%, 89%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   main {
+    width:30ch;
+    background-color: white;
+    display: grid;
+    justify-items:center;
+    align-items: center;
+    padding:2rem;
+    grid-row-gap: 1rem;
+    border-radius: 20px;
+   }
+   /*.img, .improve, .scan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }*/
+   .img {
+    background-image: url(./images/image-qr-code.png);
+    background-size: 260px 260px;
+    height: 260px;
+    width: 260px;
+    border-radius: 20px;
+   }
+
+   .improve {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color:hsl(218, 44%, 22%); 
+   }
+
+   .scan {
+    text-align: center;
+    font-size: 1rem;
+    color: hsl(220, 15%, 55%);
+   }
+ </style>
 </head>
 <body>
 <main>
-  <img src="./images/image-qr-code.png">
+  <div class="img"></div>
   <div class="improve">Improve your front-end skills by building projects
 </div>
   <div class="scan">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
@@ -23,7 +77,20 @@
 </body>
 </html>
 
+<!-- Colors
+White: hsl(0, 0%, 100%)
+Light gray: hsl(212, 45%, 89%)
+Grayish blue: hsl(220, 15%, 55%)
+Dark blue: hsl(218, 44%, 22%)
 
+Typography
+
+Body Copy
+Font size (paragraph): 15px
+
+Font
+Family: Outfit
+Weights: 400, 700 -->
 
 
  <!-- Improve your front-end skills by building projects
